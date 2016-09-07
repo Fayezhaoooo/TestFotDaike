@@ -1,0 +1,10 @@
+//2
+// Number First
+class Solution {
+    func numberFirst(inout nums: [Int]) {
+        let nonZeros = nums.filter{ $0 != 0 }.sort()
+        let zeros = nums.filter{ $0 == 0 }
+        
+        nums = nonZeros + zeros
+    }
+}
