@@ -1,0 +1,14 @@
+// 4
+//sqrt
+
+class Solution {
+    func mySqrt(x: Int) -> Int {
+        if x == 0 {return 0}
+        
+        var i = x
+        while(i > x / i) {
+            i = (i + x / i) / 2
+        }
+        return Int(i)
+    }
+}
