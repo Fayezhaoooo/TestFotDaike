@@ -1,0 +1,14 @@
+// 5
+//power of x
+class Solution {
+    func power(var x: Double, var _ n: Int) -> Double {
+        if x == 0 {return 0}
+        if n == 0 {return 1}
+        if n < 0 {
+            n = -n
+            x = 1/x
+        }
+        
+        return (n%2 == 0) ? power(x*x, n/2) : power(x*x, n/2) * x
+    }
+}
