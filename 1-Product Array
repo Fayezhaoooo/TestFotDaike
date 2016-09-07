@@ -1,0 +1,20 @@
+//1
+// Product Array
+class Solution {
+    func productArray(var nums: [Int]) -> [Int] {
+        var newArray = [Int]()
+        if nums.count < 3 {
+            return nums.reverse()
+        } else {
+            for i in 0..<nums.count {
+                swap(&nums[0], &nums[i])
+                var p = 1
+                for j in 1..<nums.count {
+                    p = p * Int(nums[j])
+                }
+                newArray.append(p)
+            }
+            return newArray
+        }
+    }
+}
